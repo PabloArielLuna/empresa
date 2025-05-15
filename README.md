@@ -1,2 +1,1 @@
-# empresa.sql
 proyecto DBA
