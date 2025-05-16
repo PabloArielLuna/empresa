@@ -410,7 +410,7 @@ drop trigger if exists modificar_localidad;
 CREATE TRIGGER modificar_localidad
 BEFORE INSERT ON localidad
 FOR EACH ROW
-INSERT INTO log_agregar_localidad (id_log, id_localidad, localidad, provincia, usuario, fecha, hora)
+INSERT INTO log_modificar_localidad (id_log, id_localidad, localidad, provincia, usuario, fecha, hora)
 VALUES (null, new.id_localidad, new.localidad, new.provincia, session_user(), now(),
 now());
 
